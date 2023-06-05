@@ -38,7 +38,7 @@ export const theme = extendTheme({
       800: '#877d71',
       900: '#73706d',
     },
-    walnutBrown: {
+    manoBrown: {
         50: "#c3a27a",
         100: "#b08e66",
         200: "#967a58",

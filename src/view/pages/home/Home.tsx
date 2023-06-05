@@ -15,7 +15,7 @@ const Home = (props: Props) => {
     awaitRequest();
   }, []);
 
-  let image = require('../../assets/images/campo.png');
+  let image = require('../../../assets/images/campo.png');
 
   return (
     <View
@@ -36,7 +36,13 @@ const Home = (props: Props) => {
         resizeMode={'cover'}
       >
         <View h="100%" w={'100%'} alignItems={'center'}>
-          <View h={'40%'} w={'100%'} alignItems={'center'} justifyContent={'center'} px={4}>
+          <View
+            h={'40%'}
+            w={'100%'}
+            alignItems={'center'}
+            justifyContent={'center'}
+            px={4}
+          >
             <Text
               style={{
                 textShadowColor: 'black',
@@ -57,7 +63,7 @@ const Home = (props: Props) => {
             justifyContent={'center'}
           >
             <Button
-              bgColor={'#097A2A'}
+              colorScheme={'green'}
               _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
               m={2}
               w={'90%'}
@@ -78,7 +84,7 @@ const Home = (props: Props) => {
               </Text>
             </Button>
             <Button
-              bgColor={'#097A2A'}
+              colorScheme={'green'}
               _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
               m={2}
               w={'90%'}
@@ -98,7 +104,7 @@ const Home = (props: Props) => {
               </Text>
             </Button>
             <Button
-              bgColor={'#097A2A'}
+              colorScheme={'green'}
               _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
               m={2}
               w={'90%'}
@@ -118,7 +124,7 @@ const Home = (props: Props) => {
               </Text>
             </Button>
             <Button
-              bgColor={'#097A2A'}
+              colorScheme={'green'}
               _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
               m={2}
               w={'90%'}

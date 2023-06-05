@@ -39,5 +39,7 @@ interface Encontros {
 export interface LigaInfo{
   league: Liga;
   country: Pais;
+  isOpen: boolean | undefined;
   seasons: Temporada[];
 }
+
