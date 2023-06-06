@@ -17,6 +17,7 @@ const Ligas = (props: any) => {
   };
   return (
     <View flex={1} backgroundColor={'#22333B'}>
+      
       <View
         flexDir={'row'}
         w={'100%'}

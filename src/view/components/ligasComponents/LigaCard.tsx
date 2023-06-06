@@ -3,8 +3,9 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SvgUri } from 'react-native-svg';
 import { handleTemporadaMenu } from '../../../controller/ligaCardController/LigaCardController';
-import { LigaInfo } from '../../../model/interfaces/LigasInterface';
+import { LigaInfo, Temporada } from '../../../model/interfaces/LigasInterface';
 import TemporadaCard from './TemporadaCard';
+
 interface ILigaCard {
   item: LigaInfo;
   data: LigaInfo[];
@@ -71,8 +72,8 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
         </View>
       </View>
       {item.isOpen &&
-        item.seasons.map((season) => {
-          return <TemporadaCard season={season} item={item}/>;
+        item.seasons.map((season: Temporada, index: number) => {
+          return <TemporadaCard id={index} season={season} item={item}/>;
         })}
     </View>
   );

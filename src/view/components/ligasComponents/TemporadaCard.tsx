@@ -10,9 +10,11 @@ import { LigaState, setLeague } from '../../../model/redux/LigaState';
 const TemporadaCard = ({
   season,
   item,
+  id
 }: {
   season: Temporada;
   item: LigaInfo;
+  id: number
 }) => {
   const navigation: any = useNavigation();
   const ligaInfo = useSelector((state: LigaState) => state);
