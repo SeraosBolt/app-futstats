@@ -8,11 +8,11 @@ const token = createTokens({
   ...tokens,
   color: {
     ...tokens.color,
-    azulEscuro: '#000000',
-    verdeEscuro: '#02735E',
-    verdeSemiEscuro: '#038C3E',
-    verde: '#038C3E',
-    verdeClaro: '#0CF25D',
+    azulEscuro: '#f5f5f5',
+    verdeEscuro: '#43652C',
+    verdeSemiEscuro: '#43652C',
+    verde: '#97B78A',
+    verdeClaro: '#97B78A',
   },
 });
 

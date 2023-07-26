@@ -16,7 +16,7 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
   React.useEffect(() => {}, []);
 
   return (
-    <View style={{elevation: 8}} marginVertical={4} backgroundColor={'$verde'} borderRadius={8}>
+    <View style={{elevation: 8}} marginVertical={8} backgroundColor={'$verde'} borderRadius={8}>
       <View flexDirection={'row'} p={4} borderRadius={12} width={'100%'}>
         <View width={'30%'} height={'100%'}>
           <Image
@@ -51,7 +51,7 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
               style={{
                 marginTop: 4,
                 width: '40%',
-                backgroundColor: '#0CF25D',
+                backgroundColor: '#43652C',
                 borderRadius: 12,
                 padding: 4,
               }}
@@ -69,7 +69,7 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
                 flexDirection={'row'}
                 justifyContent={'space-between'}
               >
-                <Text fontWeight={'bold'} color={'#22333B'}>
+                <Text fontWeight={'bold'} color={'white'}>
                   Temporadas
                 </Text>
                 {item.isOpen ? <ChevronUp /> : <ChevronDown />}

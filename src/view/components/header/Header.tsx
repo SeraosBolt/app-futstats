@@ -12,9 +12,10 @@ const Header = ({ title, navigation }: { title: string; navigation: any }) => {
       justifyContent={'center'}
       position={'relative'}
       backgroundColor={'$verdeEscuro'}
+      style={{ elevation: 8 }}
     >
       <Button
-        backgroundColor={'$verdeClaro'}
+        backgroundColor={'$verdeEscuro'}
         position={'absolute'}
         left={4}
         m={2}

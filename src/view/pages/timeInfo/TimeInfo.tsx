@@ -16,10 +16,10 @@ const TimeInfo = (props: any) => {
   };
   const formaColorHandler = (forma: string) => {
     if (forma === 'W') {
-      return 'green';
+      return '#29F000';
     }
     else if (forma === 'L') {
-      return 'red';
+      return '#FF0000';
     }
     else {
       return 'grey';
@@ -58,7 +58,7 @@ const TimeInfo = (props: any) => {
             <Text>Liga: {timeStats?.league.name}</Text>
             <Text>Pais: {timeStats?.league.country}</Text>
             <Text>Temporada: {timeStats?.league.season}</Text>
-            <View flexDirection="row" >
+            <View flexDirection="row" mt={8}>
               <Text>Forma: </Text>
               {timeStats?.form.split('').map((item, index) => {
                 while (index < 5) {
@@ -71,7 +71,7 @@ const TimeInfo = (props: any) => {
                       marginHorizontal={2}
                       borderRadius={4}
                     >
-                      <Text color={'white'} key={index}>
+                      <Text color={'white'} fontWeight={'bold'} key={index}>
                         {item}
                       </Text>
                     </View>

@@ -28,8 +28,9 @@ const TemporadaCard = ({
     >
       <View
         bg={'$verdeEscuro'}
-        m={2}
-        p={2}
+        marginHorizontal={8}
+        marginVertical={4}
+        p={8}
         alignItems={'center'}
         justifyContent={'space-between'}
         flexDirection={'row'}
