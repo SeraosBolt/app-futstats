@@ -66,7 +66,14 @@ const Temporada = (props: any) => {
         alignItems={'center'}
         justifyContent={'center'}
       >
-        <Button m={8} elevation={8} w={'90%'} backgroundColor={'$verdeEscuro'}>
+        <Button
+          m={8}
+          elevation={8}
+          w={'90%'}
+          height={'15%'}
+          backgroundColor={'$verdeEscuro'}
+          pressTheme={true}
+        >
           <Text
             style={{
               color: 'white',
@@ -80,7 +87,13 @@ const Temporada = (props: any) => {
             TABELA
           </Text>
         </Button>
-        <Button m={8} elevation={8} w={'90%'} backgroundColor={'$verdeEscuro'}>
+        <Button
+          m={8}
+          elevation={8}
+          w={'90%'}
+          height={'15%'}
+          backgroundColor={'$verdeEscuro'}
+        >
           <Text
             style={{
               color: 'white',
@@ -98,6 +111,7 @@ const Temporada = (props: any) => {
           m={8}
           elevation={8}
           w={'90%'}
+          height={'15%'}
           backgroundColor={'$verdeEscuro'}
           onPress={() => props.navigation.navigate('Times')}
         >
@@ -114,7 +128,13 @@ const Temporada = (props: any) => {
             TIMES
           </Text>
         </Button>
-        <Button m={8} elevation={8} w={'90%'} backgroundColor={'$verdeEscuro'}>
+        <Button
+          m={8}
+          elevation={8}
+          w={'90%'}
+          height={'15%'}
+          backgroundColor={'$verdeEscuro'}
+        >
           <Text
             style={{
               color: 'white',

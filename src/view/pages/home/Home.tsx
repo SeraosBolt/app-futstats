@@ -59,9 +59,11 @@ const Home = (props: Props) => {
           width={'100%'}
           alignItems={'center'}
           justifyContent={'center'}
+          paddingVertical={8}
         >
           <Button
             margin={8}
+            height={'15%'}
             width={'90%'}
             onPress={() => props.navigation.navigate('Ligas')}
             elevation={8}
@@ -83,6 +85,7 @@ const Home = (props: Props) => {
           <Button
             margin={8}
             width={'90%'}
+            height={'15%'}
             elevation={8}
             backgroundColor={'$verdeEscuro'}
           >
@@ -102,6 +105,7 @@ const Home = (props: Props) => {
           <Button
             margin={8}
             width={'90%'}
+            height={'15%'}
             elevation={8}
             backgroundColor={'$verdeEscuro'}
           >
@@ -121,6 +125,7 @@ const Home = (props: Props) => {
           <Button
             margin={8}
             width={'90%'}
+            height={'15%'}
             elevation={8}
             backgroundColor={'$verdeEscuro'}
           >
