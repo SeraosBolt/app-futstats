@@ -1,16 +1,15 @@
+import { ITeam } from './timeInfoInterface';
+
 export interface ITimeInfo {
   team: Time;
   venue: Estadio;
 }
 
-interface Time {
-  id: number;
-  name: string;
-  code: string;
-  country: string;
-  founded: number;
-  national: boolean;
-  logo: string;
+export interface Time extends ITeam {
+  code?: string;
+  country?: string;
+  founded?: number;
+  national?: boolean;
 }
 
 interface Estadio {

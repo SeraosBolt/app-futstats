@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, ChevronRightIcon } from 'native-base';
+import { View, Text} from 'tamagui';
 import { LigaInfo, Temporada } from '../../../model/interfaces/LigasInterface';
 import { formatData } from '../../../controller/ligaCardController/LigaCardController';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import { useDispatch, useSelector } from 'react-redux';
 import { LigaState, setLeague } from '../../../model/redux/LigaState';
-
+import { ChevronRight} from '@tamagui/lucide-icons';
 const TemporadaCard = ({
   season,
   item,
@@ -27,14 +27,14 @@ const TemporadaCard = ({
       }}
     >
       <View
-        shadow={8}
-        bg={'manoBrown.400'}
+        bg={'$verdeEscuro'}
         m={2}
         p={2}
         alignItems={'center'}
         justifyContent={'space-between'}
-        flexDir={'row'}
+        flexDirection={'row'}
         borderRadius={12}
+        style={{ elevation: 4 }}
       >
         <View alignItems={'center'}>
           <Text
@@ -44,7 +44,7 @@ const TemporadaCard = ({
               textShadowRadius: 4,
             }}
             fontSize={16}
-            fontWeight={'extrabold'}
+            fontWeight={'bold'}
             color={'white'}
           >
             TEMPORADA {season.year}
@@ -53,17 +53,12 @@ const TemporadaCard = ({
         <View>
           <Text
             fontSize={12}
-            style={{
-              textShadowColor: 'black',
-              textShadowOffset: { width: 2, height: 2 },
-              textShadowRadius: 4,
-            }}
-            fontWeight={'extrabold'}
+            fontWeight={'bold'}
             color={'white'}
           >
             INICIO
           </Text>
-          <Text fontSize={12} fontWeight={'extrabold'} color={'white'}>
+          <Text fontSize={12} fontWeight={'bold'} color={'white'}>
             {formatData(season.start)}
           </Text>
 
@@ -74,17 +69,17 @@ const TemporadaCard = ({
               textShadowOffset: { width: 2, height: 2 },
               textShadowRadius: 4,
             }}
-            fontWeight={'extrabold'}
+            fontWeight={'bold'}
             color={'white'}
           >
             FIM
           </Text>
-          <Text fontSize={12} fontWeight={'extrabold'} color={'white'}>
+          <Text fontSize={12} fontWeight={'bold'} color={'white'}>
             {formatData(season.end)}
           </Text>
         </View>
         <View alignItems={'center'}>
-          <ChevronRightIcon color={'white'} />
+          <ChevronRight color={'white'} />
         </View>
       </View>
     </TouchableOpacity>

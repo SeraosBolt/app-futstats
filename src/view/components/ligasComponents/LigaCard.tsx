@@ -1,4 +1,5 @@
-import { ChevronDownIcon, ChevronUpIcon, Image, Text, View } from 'native-base';
+import { Image, Text, View } from 'tamagui';
+import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons';
 import React from 'react';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SvgUri } from 'react-native-svg';
@@ -15,9 +16,9 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
   React.useEffect(() => {}, []);
 
   return (
-    <View m={2} background={'khaki.400'} borderRadius={8}>
-      <View flexDir={'row'} p={2} borderRadius={12}>
-        <View w={'20%'} h={'100%'}>
+    <View style={{elevation: 8}} marginVertical={4} backgroundColor={'$verde'} borderRadius={8}>
+      <View flexDirection={'row'} p={4} borderRadius={12} width={'100%'}>
+        <View width={'30%'} height={'100%'}>
           <Image
             resizeMode="contain"
             h={100}
@@ -26,28 +27,34 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
             alt={'logo'}
           />
         </View>
-        <View mx={2} w={'80%'}>
-          <Text fontWeight={'extrabold'} color={'#22333B'}>
+        <View width={'75%'}>
+          <Text fontWeight={'bold'} color={'#22333B'}>
             Liga : {item.league.name}
           </Text>
           <View
             position={'relative'}
             alignItems={'center'}
             w={'100%'}
-            flexDir={'row'}
+            flexDirection={'row'}
           >
             <View>
-              <Text fontWeight={'extrabold'} color={'#22333B'}>
+              <Text fontWeight={'bold'} color={'#22333B'}>
                 Pais : {item.country.name}
               </Text>
             </View>
-            <View ml={2} w={'25'} h={'25'}>
+            <View ml={2} width={25} height={25}>
               <SvgUri width="100%" height="100%" uri={item.country.flag} />
             </View>
           </View>
           <View w={'100%'} alignItems={'center'}>
             <TouchableOpacity
-              style={{ width: '50%' }}
+              style={{
+                marginTop: 4,
+                width: '40%',
+                backgroundColor: '#0CF25D',
+                borderRadius: 12,
+                padding: 4,
+              }}
               onPress={() =>
                 handleTemporadaMenu(data, item.league.id, setLigaInfo)
               }
@@ -59,13 +66,13 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
                 borderRadius={12}
                 w={'100%'}
                 my={2}
-                flexDir={'row'}
+                flexDirection={'row'}
                 justifyContent={'space-between'}
               >
-                <Text fontWeight={'extrabold'} color={'#22333B'}>
+                <Text fontWeight={'bold'} color={'#22333B'}>
                   Temporadas
                 </Text>
-                {item.isOpen ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                {item.isOpen ? <ChevronUp /> : <ChevronDown />}
               </View>
             </TouchableOpacity>
           </View>
@@ -73,7 +80,7 @@ const LigaCard = ({ item, data, setLigaInfo }: ILigaCard) => {
       </View>
       {item.isOpen &&
         item.seasons.map((season: Temporada, index: number) => {
-          return <TemporadaCard id={index} season={season} item={item}/>;
+          return <TemporadaCard id={index} season={season} item={item} />;
         })}
     </View>
   );

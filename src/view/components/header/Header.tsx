@@ -1,50 +1,29 @@
 import React from 'react';
-import { View, Text, IconButton } from 'native-base';
-import { MaterialIcons } from '@expo/vector-icons';
+import { View, Text, Button } from 'tamagui';
+import { ChevronLeft } from '@tamagui/lucide-icons';
 
-const Header = ({
-  title,
-  navigation,
-  page,
-}: {
-  title: string;
-  navigation: any;
-  page: string;
-}) => {
+const Header = ({ title, navigation }: { title: string; navigation: any }) => {
   return (
     <View
-      flexDir={'row'}
+      flexDirection={'row'}
       w={'100%'}
-      h={16}
+      h={'10%'}
       alignItems={'center'}
       justifyContent={'center'}
       position={'relative'}
-      backgroundColor={'manoBrown.400'}
+      backgroundColor={'$verdeEscuro'}
     >
-      <IconButton
+      <Button
+        backgroundColor={'$verdeClaro'}
         position={'absolute'}
-        left={0}
+        left={4}
         m={2}
         p={4}
-        colorScheme={'almond'}
-        size={'sm'}
-        variant="solid"
-        _icon={{
-          as: MaterialIcons,
-          name: 'arrow-back',
-        }}
-        onPress={() => navigation.navigate(page)}
-      />
-      <Text
-        style={{
-          textShadowColor: 'black',
-          textShadowOffset: { width: 2, height: 2 },
-          textShadowRadius: 4,
-        }}
-        fontSize={28}
-        fontWeight={'extrabold'}
-        color={'white'}
+        onPress={() => navigation.goBack()}
       >
+        <ChevronLeft />
+      </Button>
+      <Text fontSize={28} fontWeight={'bold'} color={'white'}>
         {title}
       </Text>
     </View>

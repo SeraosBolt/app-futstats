@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Text, View } from 'native-base';
+import { Button, Text, View } from 'tamagui';
 import React from 'react';
 import { ImageBackground } from 'react-native';
 
@@ -35,13 +35,13 @@ const Home = (props: Props) => {
         source={image}
         resizeMode={'cover'}
       >
-        <View h="100%" w={'100%'} alignItems={'center'}>
+        <View height="100%" width={'100%'} alignItems={'center'}>
           <View
-            h={'40%'}
-            w={'100%'}
+            height={'40%'}
+            width={'100%'}
             alignItems={'center'}
             justifyContent={'center'}
-            px={4}
+            paddingHorizontal={4}
           >
             <Text
               style={{
@@ -50,25 +50,24 @@ const Home = (props: Props) => {
                 textShadowRadius: 4,
               }}
               fontSize={60}
-              fontWeight={'extrabold'}
+              fontWeight={'bold'}
               color={'white'}
             >
               FUTSTATS
             </Text>
           </View>
           <View
-            h={'60%'}
-            w={'100%'}
+            height={'60%'}
+            width={'100%'}
             alignItems={'center'}
             justifyContent={'center'}
           >
             <Button
-              colorScheme={'green'}
-              _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
-              m={2}
-              w={'90%'}
+              margin={8}
+              width={'90%'}
               onPress={() => props.navigation.navigate('Ligas')}
-              shadow={8}
+              elevation={8}
+              backgroundColor={'$verdeEscuro'}
             >
               <Text
                 style={{
@@ -84,11 +83,10 @@ const Home = (props: Props) => {
               </Text>
             </Button>
             <Button
-              colorScheme={'green'}
-              _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
-              m={2}
-              w={'90%'}
-              shadow={8}
+              margin={8}
+              width={'90%'}
+              elevation={8}
+              backgroundColor={'$verdeEscuro'}
             >
               <Text
                 style={{
@@ -104,11 +102,10 @@ const Home = (props: Props) => {
               </Text>
             </Button>
             <Button
-              colorScheme={'green'}
-              _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
-              m={2}
-              w={'90%'}
-              shadow={8}
+              margin={8}
+              width={'90%'}
+              elevation={8}
+              backgroundColor={'$verdeEscuro'}
             >
               <Text
                 style={{
@@ -124,11 +121,10 @@ const Home = (props: Props) => {
               </Text>
             </Button>
             <Button
-              colorScheme={'green'}
-              _text={{ color: 'white', fontWeight: 'bold', fontSize: 20 }}
-              m={2}
-              w={'90%'}
-              shadow={8}
+              margin={8}
+              width={'90%'}
+              elevation={8}
+              backgroundColor={'$verdeEscuro'}
             >
               <Text
                 style={{

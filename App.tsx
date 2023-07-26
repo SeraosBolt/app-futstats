@@ -11,11 +11,16 @@ import * as Font from 'expo-font';
 
 import { theme } from './src/model/theme/theme';
 
+import { TamaguiProvider } from 'tamagui'
+
+import appConfig from './tamagui.config'
+
 import Home from './src/view/pages/home/Home';
 import Ligas from './src/view/pages/ligas/Ligas';
 import Temporada from './src/view/pages/temporada/Temporada';
 import { leagueStore } from './src/model/redux/LigaState';
 import Times from './src/view/pages/times/Times';
+import TimesInfo from './src/view/pages/timeInfo/TimeInfo';
 
 let custom_fonts = {
   'NotoSans-Regular': require('./src/assets/fonts/NotoSans-Regular.ttf'),
@@ -45,7 +50,7 @@ export default function App() {
     return (
       <Provider store={leagueStore}>
       <SafeAreaView style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
-        <NativeBaseProvider theme={theme}>
+      <TamaguiProvider config={appConfig}>
           <NavigationContainer>
             <stack.Navigator
               initialRouteName="Home"
@@ -59,9 +64,10 @@ export default function App() {
               <stack.Screen name="Ligas" component={Ligas} />
               <stack.Screen name="Temporada" component={Temporada} />
               <stack.Screen name="Times" component={Times} />
+              <stack.Screen name="TimeInfo" component={TimesInfo} />
             </stack.Navigator>
           </NavigationContainer>
-        </NativeBaseProvider>
+        </TamaguiProvider>
       </SafeAreaView>
       </Provider>
     );
