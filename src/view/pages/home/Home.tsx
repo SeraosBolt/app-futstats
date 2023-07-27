@@ -91,6 +91,7 @@ const Home = (props: Props) => {
           >
             <Text
               style={{
+                fontFamily: 'Montserrat-Regular',
                 color: 'white',
                 fontWeight: 'bold',
                 fontSize: 20,

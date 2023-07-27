@@ -104,6 +104,6 @@ export interface ITimeStats {
   clean_sheet: IInfo;
   failed_to_score: IInfo;
   penalty: IPenalty;
-  lineup?: IFormacao[];
+  lineups?: IFormacao[];
   cards: ICartoes;
 }

@@ -52,48 +52,48 @@ export const theme = extendTheme({
     },
   },
   fontConfig: {
-    NotoSans: {
+    Montserrat: {
       100: {
-        normal: 'NotoSans-Light',
-        italic: 'NotoSans-LightItalic',
+        normal: 'Montserrat-Light',
+        italic: 'Montserrat-LightItalic',
       },
       200: {
-        normal: 'NotoSans-Light',
-        italic: 'NotoSans-LightItalic',
+        normal: 'Montserrat-Light',
+        italic: 'Montserrat-LightItalic',
       },
       300: {
-        normal: 'NotoSans-Light',
-        italic: 'NotoSans-LightItalic',
+        normal: 'Montserrat-Light',
+        italic: 'Montserrat-LightItalic',
       },
       400: {
-        normal: 'NotoSans-Regular',
-        italic: 'NotoSans-Italic',
+        normal: 'Montserrat-Regular',
+        italic: 'Montserrat-Italic',
       },
       500: {
-        normal: 'NotoSans-Medium',
-        italic: 'NotoSans-MediumItalic',
+        normal: 'Montserrat-Medium',
+        italic: 'Montserrat-MediumItalic',
       },
       600: {
-        normal: 'NotoSans-Medium',
-        italic: 'NotoSans-MediumItalic',
+        normal: 'Montserrat-Medium',
+        italic: 'Montserrat-MediumItalic',
       },
       700: {
-        normal: 'NotoSans-Bold',
-        italic: 'NotoSans-BoldItalic',
+        normal: 'Montserrat-Bold',
+        italic: 'Montserrat-BoldItalic',
       },
       800: {
-        normal: 'NotoSans-Bold',
-        italic: 'NotoSans-BoldItalic',
+        normal: 'Montserrat-Bold',
+        italic: 'Montserrat-BoldItalic',
       },
       900: {
-        normal: 'NotoSans-Bold',
-        italic: 'NotoSans-BoldItalic',
+        normal: 'Montserrat-Bold',
+        italic: 'Montserrat-BoldItalic',
       },
     },
   },
   fonts: {
-    heading: 'NotoSans',
-    body: 'NotoSans',
-    mono: 'NotoSans',
+    heading: 'Montserrat',
+    body: 'Montserrat',
+    mono: 'Montserrat',
   },
 });

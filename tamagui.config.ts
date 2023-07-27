@@ -25,7 +25,7 @@ const appConfig = createTamagui({
 
   fonts: {
     body: createFont({
-      family: 'Arial',
+      family: 'Montserrat',
 
       size: {
         // You'll want to fill these values in so you can use them
